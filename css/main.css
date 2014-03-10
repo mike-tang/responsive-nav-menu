@@ -137,7 +137,7 @@ textarea {
 }
 
 .nav-bar a.nav-logo:hover {
-    background-color: #f4f4f4;
+    /*background-color: #f4f4f4;*/
 }
 
 .nav-bar .nav-logo > img {
@@ -184,7 +184,7 @@ textarea {
     */
 }
 
-.nav-bar li.nav-level-1 a:hover {
+.nav-bar li.nav-level-1 a.nav-link-1:hover {
     border-bottom: 5px solid #365ebf;
     /*
     -webkit-transition: border-bottom 0.1s linear;
@@ -233,6 +233,30 @@ textarea {
 
 .nav-menu .nav-dropdown.active {
     display: block;
+}
+
+.nav-menu .nav-menu-section {
+    display: inline-block;
+    float: left;
+    width: 25%;
+    padding: 0 20px 0 0;
+}
+
+.nav-menu .nav-menu-section-title {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.50em;
+    font-weight: 400;
+    padding: 0 0 10px;
+    color: #365ebf;
+}
+.nav-menu .nav-menu-collapse {
+    padding: 0 0 20px;
+}
+.nav-menu .nav-level-2 > a {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 0.875em;
+    font-weight: 400;
+    color: #505050;
 }
 
 /***********/
@@ -519,6 +543,17 @@ textarea {
     #search #search-form {
         display: none;
     }
+
+    .nav-menu .nav-dropdown {
+        position: absolute;
+        left: 0;
+        top: 80px;
+        width: 100%;
+        background-color: #f4f4f4;
+    }
+    .nav-menu .nav-dropdown-inner {
+        padding: 20px;
+    }
 }
 
 @media screen and (max-width: 1032px) {
@@ -605,7 +640,7 @@ textarea {
         color: #505050;
     }
 
-    .nav-bar li.nav-level-1 a:hover {
+    .nav-bar li.nav-level-1 a.nav-link-1:hover {
         border-bottom: 0;
     }
 
@@ -616,13 +651,24 @@ textarea {
         padding: 20px 0;
         background-color: #A5B3C1;
     }
+    .nav-menu .nav-menu-section {
+        display: inline-block;
+        float: left;
+        width: 50%;
+        padding: 0 20px;
+    }
+    .nav-menu .nav-menu-section-title {
+        padding: 0;
+    }
 
     .nav-dropdown .nav-level-2 > a {
         font-size: 0.875em;
         font-weight: 400;
         color: #505050;
-        padding: 0 20px;
+        padding: 0;
     }
+
+    
 
 /*
     ul.nav-action-group,
@@ -649,5 +695,10 @@ textarea {
         padding-left: 5px;
     }
 
+    .nav-menu .nav-menu-section {
+        display: block;
+        float: left;
+        width: 100%;
+    }
 
 }
